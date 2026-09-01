@@ -1,0 +1,7 @@
+const projects = [
+  {title:"Amazon Financial Analysis — 2021–2025",category:["financial-analysis","power-bi","excel"],featured:true,description:"A structured financial-analysis project designed to examine income statement, balance sheet and cash-flow data alongside ratios, trends and Power BI visualization. Add your Excel workbook, dashboard and sources when ready.",tools:["Excel","Power BI","Financial Statements","Ratio Analysis"],visual:"chart"},
+  {title:"Financial Statement Analysis",category:["financial-analysis","research"],description:"A portfolio space for a financial-statement review covering profitability, liquidity, solvency, efficiency and cash-flow analysis.",tools:["Financial Analysis","Excel","Research"],visual:"bars"},
+  {title:"Valuation Framework",category:["valuation","excel"],description:"A structured space for future valuation work using DCF, multiples and corporate-finance assumptions.",tools:["DCF","Multiples","Excel"],visual:"grid"},
+  {title:"Power BI Financial Dashboard",category:["power-bi","data-analysis"],description:"A future dashboard project area for clear financial KPIs, trend reporting and business performance visualization.",tools:["Power BI","Data Visualization","KPIs"],visual:"bars"},
+  {title:"Excel Data Analysis",category:["excel","data-analysis"],description:"A dedicated project area for spreadsheet-based analysis, reporting workflows and financial data interpretation.",tools:["Excel","Data Analysis","Reporting"],visual:"grid"}
+];
