@@ -570,6 +570,15 @@ h1 em { color: #fff; }
   transform: translateY(-5px);
   border-color: rgba(141, 80, 97, .3);
 }
+.empty-state {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 40px 24px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  border: 1px dashed var(--line);
+}
 .project.featured {
   grid-column: span 2;
   display: grid;
