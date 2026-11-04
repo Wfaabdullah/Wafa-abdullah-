@@ -122,7 +122,10 @@ p { text-wrap: pretty; }
 .site-header nav a {
   font-size: 14px;
   position: relative;
-  padding: 6px 0;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0;
   transition: color .2s ease;
 }
 .site-header nav a::after {
@@ -166,7 +169,9 @@ p { text-wrap: pretty; }
   background: none;
   border: 0;
   color: var(--navy);
-  padding: 11px 6px;
+  padding: 11px 10px;
+  min-width: 44px;
+  min-height: 44px;
   margin-left: auto;
   cursor: pointer;
   border-radius: 4px;
@@ -267,7 +272,8 @@ h1 em { color: #fff; }
   font-size: 14px;
   font-weight: 700;
   border-bottom: 1px solid var(--navy);
-  padding-bottom: 4px;
+  min-height: 44px;
+  padding: 6px 0;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -1079,16 +1085,14 @@ footer p:last-child { color: #aeb5c2; }
   .tags span { font-size: 10.5px; padding: 5px 8px; }
 
   .project-filters {
-    gap: 7px;
-    margin-inline: -22px;
-    padding: 2px 22px 4px;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
+    gap: 8px;
+    margin-inline: 0;
+    padding: 0;
+    overflow: visible;
+    flex-wrap: wrap;
+    max-width: 100%;
   }
-  .project-filters::-webkit-scrollbar { display: none; }
-  .filter { flex: 0 0 auto; min-height: 44px; }
+  .filter { flex: 0 0 auto; min-height: 44px; padding: 10px 14px; }
 
   .projects-grid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
   .project.featured {
