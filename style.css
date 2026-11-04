@@ -107,6 +107,9 @@ p { text-wrap: pretty; }
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   font: 600 25px/1.1 var(--serif);
   letter-spacing: -.04em;
   color: var(--navy);
@@ -685,6 +688,7 @@ h1 em { color: #fff; }
 .project-actions a {
   border-bottom: 1px solid currentColor;
   padding-bottom: 2px;
+  min-height: 44px;
   color: var(--navy);
   display: inline-flex;
   align-items: center;
