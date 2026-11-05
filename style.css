@@ -325,7 +325,7 @@ h1 em { color: #fff; }
   height: auto;
   aspect-ratio: 31 / 40;
   object-fit: cover;
-  object-position: 50% 16%;
+  object-position: 50% 2%;
   border-radius: 50% 50% 0 0 / 42% 42% 0 0;
   outline: 1px solid rgba(231, 226, 206, .6);
   outline-offset: 10px;
