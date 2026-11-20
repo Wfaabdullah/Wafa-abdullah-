@@ -5,11 +5,14 @@ A lightweight, responsive portfolio website for **Wafa Abdullah** — Finance, D
 ## Files
 
 - `index.html` — Website structure and content
+- `aurelia.html` — Aurelia project details and embedded previews
+- `aurelia.css` — Page-specific responsive styles using the existing design system
 - `style.css` — Responsive editorial/finance design system
 - `projects.js` — Project data; add future projects here
 - `script.js` — Menu, filters, animation and active navigation
-- `assets/documents/Wafa-Abdullah-CV.pdf` — CV download file
-- `assets/images/` — Add your professional photo as `profile.jpg` when ready
+- `assets/aurelia/` — Supplied interactive dashboard HTML and print-ready report PDF
+- `profile.jpg` — Homepage portrait image
+- `assets/documents/Wafa-Abdullah-CV.pdf` — Add the CV PDF here to complete the existing homepage download link
 
 ## Publish with GitHub Pages
 
@@ -35,4 +38,4 @@ Add this CSS to `style.css`:
 
 ## Add project links
 
-The visible project buttons currently point to the contact section until Power BI reports, GitHub repositories or files are available. Update the `projects` objects in `projects.js` as you add them.
+The featured Aurelia project links to `aurelia.html`. Its supplied report and interactive dashboard are stored in `assets/aurelia/`; the remaining project cards can be linked by updating their objects in `projects.js` as reports, repositories or files become available.
