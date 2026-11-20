@@ -13,3 +13,28 @@ html{scroll-padding-top:96px}section[id]{scroll-margin-top:96px}
 @media(max-width:900px){.hero{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);padding:64px 38px;gap:32px;align-items:center}.hero-visual{position:relative;right:auto;bottom:auto;width:100%;opacity:1;min-height:420px;padding:12px 12px 100px}.chart-main{width:85%}.data-note{display:none}.hero-side{right:12px;bottom:20px}}
 @media(max-width:650px){html{scroll-padding-top:84px}section[id]{scroll-margin-top:84px}.hero{grid-template-columns:minmax(0,1fr);padding:48px 24px 60px;gap:36px;min-height:auto}.hero-copy{z-index:1}.hero-visual{position:relative;width:100%;max-width:390px;margin-inline:auto;min-height:0;padding:12px 12px 110px;opacity:1}.profile-photo{width:min(280px,85%);flex-basis:280px}.chart-main{width:min(230px,75%);right:0;bottom:0}.hero-side{bottom:18px;right:24px;flex-direction:row}.hero-actions{gap:20px}.analytics-intro>p:last-child{margin-top:24px}.capability-row article:nth-child(3){padding-left:0}}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.chart-main{animation:none}}
+
+/* CV-based experience and development details */
+.experience{display:grid;grid-template-columns:.8fr 1.2fr;gap:10%;background:#eae8e1}
+.experience-card{align-self:start;background:var(--ivory);border:1px solid var(--line);border-top:3px solid var(--sapphire);padding:clamp(24px,4vw,46px);box-shadow:var(--shadow)}
+.experience-card-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:20px}
+.experience-card-heading .eyebrow{margin-bottom:8px}
+.experience-card h3{font:500 clamp(25px,3vw,34px)/1.12 var(--serif);color:var(--navy);margin:0}
+.experience-dates{font-size:12px;font-weight:700;color:var(--navy);white-space:nowrap;padding:7px 10px;background:var(--champagne)}
+.experience-location{font-size:12px;color:#687184;margin:13px 0 22px}
+.experience-card ul{margin:0;padding-left:19px;color:#4f596d;font-size:14px;line-height:1.65}
+.experience-card li+li{margin-top:11px}
+.experience-card li::marker{color:#96733d}
+.profile-languages{border-left:2px solid #96733d;padding-left:14px;color:#596375;font-size:13px}
+.profile-languages strong{color:var(--navy);margin-right:5px}
+.additional-credentials{grid-column:1/-1;display:grid;grid-template-columns:1.2fr .8fr;gap:10%;align-items:start;margin-top:30px;padding-top:28px;border-top:1px solid var(--line)}
+.course-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}
+.course-list li{padding:11px 0;border-bottom:1px solid var(--line);font-size:13px;font-weight:600;color:var(--navy)}
+.course-list li span{font-size:12px;font-weight:400;color:#687184}
+.credential-note{align-self:stretch;margin:0;padding:23px;background:var(--champagne);color:#4f596d;font:500 19px/1.45 var(--serif)}
+@media(max-width:900px){.experience{grid-template-columns:1fr;gap:35px}.additional-credentials{grid-template-columns:1fr;gap:24px}}
+@media(max-width:650px){.experience-card-heading{display:block}.experience-dates{display:inline-block;margin-top:14px}.course-list{grid-template-columns:1fr}.additional-credentials{margin-top:18px}}
+
+@media(min-width:651px) and (max-width:900px){.site-header{padding:0 24px}.header-contact{display:none}.menu-toggle{display:block;margin-left:auto}nav{display:none;position:absolute;top:78px;left:0;right:0;background:var(--ivory);margin:0;padding:18px 24px 23px;border-bottom:1px solid var(--line);box-shadow:0 14px 25px rgba(17,34,80,.08);flex-direction:column;gap:13px}nav.open{display:flex}}
+
+.education-meta{flex-direction:column;align-items:flex-start;gap:5px}
