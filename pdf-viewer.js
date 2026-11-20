@@ -120,25 +120,38 @@
     }, { root: viewport, rootMargin: '80% 0px' });
     model.forEach(item => observer.observe(item.element));
   };
+  const getPagePosition = element => {
+    const pageRect = element.getBoundingClientRect();
+    const viewportRect = viewport.getBoundingClientRect();
+    return {
+      left: viewport.scrollLeft + pageRect.left - viewportRect.left - viewport.clientLeft,
+      top: viewport.scrollTop + pageRect.top - viewportRect.top - viewport.clientTop
+    };
+  };
   const goToPage = number => {
     const page = Math.max(1, Math.min(model.length, number));
     currentPage = page;
-    viewport.scrollTo({ top: model[page - 1].element.offsetTop, behavior: 'auto' });
+    const position = getPagePosition(model[page - 1].element);
+    viewport.scrollTo({ top: position.top, left: position.left, behavior: 'auto' });
     updateControls();
   };
   const captureAnchor = () => {
     const element = model[currentPage - 1].element;
+    const position = getPagePosition(element);
+    const rect = element.getBoundingClientRect();
     return {
       page: currentPage,
-      x: Math.max(0, Math.min(1, (viewport.scrollLeft + viewport.clientWidth / 2 - element.offsetLeft) / element.offsetWidth)),
-      y: Math.max(0, Math.min(1, (viewport.scrollTop + viewport.clientHeight / 2 - element.offsetTop) / element.offsetHeight))
+      x: Math.max(0, Math.min(1, (viewport.scrollLeft + viewport.clientWidth / 2 - position.left) / rect.width)),
+      y: Math.max(0, Math.min(1, (viewport.scrollTop + viewport.clientHeight / 2 - position.top) / rect.height))
     };
   };
   const restoreAnchor = anchor => {
     const element = model[anchor.page - 1].element;
+    const position = getPagePosition(element);
+    const rect = element.getBoundingClientRect();
     viewport.scrollTo({
-      left: element.offsetLeft + anchor.x * element.offsetWidth - viewport.clientWidth / 2,
-      top: element.offsetTop + anchor.y * element.offsetHeight - viewport.clientHeight / 2,
+      left: position.left + anchor.x * rect.width - viewport.clientWidth / 2,
+      top: position.top + anchor.y * rect.height - viewport.clientHeight / 2,
       behavior: 'auto'
     });
     currentPage = anchor.page;
