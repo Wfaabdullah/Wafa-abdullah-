@@ -1,8 +1,8 @@
 const projects = [
   {
     title: "Aurelia – Financial Analysis & Interactive Dashboard",
-    category: ["financial-analysis", "financial-modeling", "data-visualization", "excel"],
-    categoryLabel: "Financial Analysis · Financial Modeling · Data Visualization",
+    category: ["financial-analysis", "financial-modeling", "forecasting", "data-visualization", "excel"],
+    categoryLabel: "Financial Analysis | Financial Modeling | Forecasting | Data Visualization",
     featured: true,
     description: "An independent analysis of a fictional e-commerce and cloud services company, reviewing FY2021–FY2025 performance and FY2026E–FY2028E forecasts through an interactive dashboard.",
     tools: ["Excel", "HTML", "CSS", "JavaScript", "Financial Modeling"],
